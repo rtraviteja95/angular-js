@@ -1,0 +1,30 @@
+<table class="table table-striped table-bordered" align="center" style="width:60%; align-content:center;">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">DOB</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Address</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentsData" scope="row">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.dob }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.address }}</td>
+      <td>
+        <button class="btn btn-warning" style="margin-right: 0.5rem;">Update</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table> 
+
+<!--- <ng2-smart-table 
+    [settings]="settings" 
+    [source]="studentsData">
+</ng2-smart-table> -->
